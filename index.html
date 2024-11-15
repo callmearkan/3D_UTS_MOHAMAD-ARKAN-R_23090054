@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Bisnis - WARUNG KELONTONG MAR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    
+    <header>
+        <div class="navbar">
+            <h1>WARUNG KELONTONG MAR</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <div class="toggle-button" onclick="toggleMenu()">
+                    ☰ Menu
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Selamat Datang di Warung Kelontong MAR</h2>
+            <p>Warung Kelontong MAR adalah sebuah toko serba ada yang menyediakan beragam kebutuhan harian untuk masyarakat sekitar.
+                Dari sembako seperti beras, gula, minyak goreng, dan tepung, hingga kebutuhan rumah tangga seperti sabun, deterjen, dan perlengkapan kebersihan lainnya, 
+                semuanya tersedia dengan harga terjangkau.</P>
+            <div class="extra-content" style="display: none;">
+                <p>Warung kami berkomitmen untuk memberikan pelayanan ramah dan menyediakan produk segar serta berkualitas. 
+                Dengan lokasi strategis dan suasana yang nyaman, Warung Kelontong MAR menjadi pilihan tepat untuk belanja cepat dan mudah bagi keluarga Anda.</p>
+            </div>
+            <a href="#" id="show-more" class="button">Selengkapnya</a>
+        </div>
+        <div class="hero-image">
+            <img src="gambar/warung.jpeg" width="200" height="190">
+        </div>
+    </section>
+
+    <section id="about" class="layanan">
+        <h3>LAYANAN KAMI</h3>
+        <p>Warung kelontong menyediakan beragam layanan untuk memenuhi kebutuhan sehari-hari masyarakat dengan kenyamanan dan harga yang terjangkau.
+        Berikut adalah layanan utama yang ditawarkan :</p>
+        <table>
+            <tr>
+                <th>Layanan Pengisian Pulsa dan Paket Data</th>
+                <th>Layanan Penjualan Sembako </th>
+                <th>Layanan Pesan Antar</th>
+            </tr>
+            <tr>
+                <td>Menyediakan kebutuhan pokok seperti beras, gula, minyak, telur, dan tepung.</td>
+                <td>Layanan isi ulang pulsa dan paket data untuk berbagai operator seluler.</td>
+                <td>Kami antar langsung ke lokasi Anda tanpa harus keluar rumah.</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Product/Service Section -->
+    <section class="service">
+        <h3>PRODUK KAMI</h3>
+        <p>Warung kelontong menyediakan berbagai macam kebutuhan pokok dan barang sehari-hari yang dibutuhkan oleh masyarakat.
+             Produk yang dijual di warung kelontong mencakup:</p>
+        <div class="produk-list">
+            <div class="produk-item">
+                <img src="gambar/gula.jpg" alt="Product 1" width="200" height="190" >
+                <h4>Gula pasir</h4>
+                <p>Gula pasir yang berkualitas tinggi, diproses secara higienis untuk menjaga kemurnian dan rasa manisnya.</p>
+            </div>
+            <div class="produk-item">
+                <img src="gambar/minyak bimoli.jpg" alt="Product 2" width="20" height="190">
+                <h4>Minyak Goreng</h4>
+                <p>Minyak goreng kelapa sawit atau minyak nabati yang berkualitas tinggi.</p>
+            </div>
+            <div class="produk-item">
+                <img src="gambar/beras.jpg" alt="Product 3" width="200" height="190">
+                <h4>Beras Premium</h4>
+                <p>Beras premium dengan kualitas pilihan, tersedia dalam beberapa varietas seperti beras putih pulen, beras pandan wangi, dan beras merah.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h3>Kontak Kami</h3>
+        <form class="contact-form">
+            <p><label for="nama">Nama:</label>
+            <input id="nama" type="text" placeholder="Nama Anda" required></p>
+
+            <p><label for="email">Email:</label>
+            <input id="email" type="email" placeholder="Email Anda" required></p>
+
+            <p><label for="pesan">Pesan:</label>
+            <textarea id="pesan" type="pesan" placeholder="Pesan Anda"></textarea></p>
+
+            <button class="pop" type="submit">Kirim</button>
+        </form>
+    </section>
+
+    <!-- Bagian footer yang berisi informasi kontak. -->
+    <footer class="footer">
+        <p>Hubungi Kami:</p>
+        <p><a href="mailto:muhamadarkhan49@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a> <a href="https://wa.me/085786531239"><i class="fa-solid fa-phone"></i> Telepon</a></p>
+        <p><a href="https://www.instagram.com/mhmdarkan17/profilecard/?igsh=dmNucmZ1NW56bnk0"><i class="fa-brands fa-instagram"></i> Instagram</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+<script>
+    document.getElementById("show-more").addEventListener("click", function(event) {
+        event.preventDefault();
+
+        const extraContent = document.querySelector(".extra-content");
+
+        if (extraContent.style.display === "none" || extraContent.style.display === "") {
+            extraContent.style.display = "block";
+            this.textContent = "Lebih Sedikit";
+        } else {
+            extraContent.style.display = "none";
+            this.textContent = "Selengkapnya";
+        }
+    });
+</script>
+
+</html>
